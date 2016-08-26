@@ -10,20 +10,41 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
-            //poly-morphism behaviour
-            List<Person> list = new List<Person>();
+            //abstract examples
+            Dog rex = new Dog();
+            rex.Name = "Rex";
+            Cat fluffy = new Cat();
+            fluffy.Name = "Fluffy";
+            Mammal weko = new Human();
+            weko.Name = "Wekoslav";
 
-            list.Add(new Person("Wekoslav", "Stefanovski"));
-            list.Add(new AgedPerson("Petar", "Petrov", 25));
+            List<Mammal> mammals = new List<Mammal>();
+            mammals.Add(rex);
+            mammals.Add(fluffy);
+            mammals.Add(weko);
 
-            foreach (Person person in list)
+            foreach (Mammal mammal in mammals)
             {
-                Console.WriteLine(person);
+                Console.WriteLine("{0} says {1}", 
+                    mammal.Name, mammal.MakeNoise());
             }
 
-            Person p = new AgedPerson("Trajko", "Trajcev", 56);
-            Console.WriteLine(p);
 
+
+
+            //poly-morphism behaviour
+            //List<Person> list = new List<Person>();
+
+            //list.Add(new Person("Wekoslav", "Stefanovski"));
+            //list.Add(new AgedPerson("Petar", "Petrov", 25));
+
+            //foreach (Person person in list)
+            //{
+            //    Console.WriteLine(person);
+            //}
+
+            //Person p = new AgedPerson("Trajko", "Trajcev", 56);
+            //Console.WriteLine(p);
 
             //Aged Person exercises
             //AgedPerson weko = new AgedPerson();
