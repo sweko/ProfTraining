@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace DataTypesDemo
 {
-    class Person
+    public class Person
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        public Gender Gender { get; set; }
+    }
+
+    public enum Gender
+    {
+        Male,
+        Female,
+        Unknown
     }
 }
