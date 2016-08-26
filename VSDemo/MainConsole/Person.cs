@@ -25,6 +25,7 @@ namespace MainConsole
             LastName = lastName;
         }
 
+        //public static int Count { get; set; }
         static int count;
 
         public string FirstName { get; set; }
