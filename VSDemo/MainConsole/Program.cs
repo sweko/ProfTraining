@@ -29,9 +29,6 @@ namespace MainConsole
                     mammal.Name, mammal.MakeNoise());
             }
 
-
-
-
             //poly-morphism behaviour
             //List<Person> list = new List<Person>();
 
