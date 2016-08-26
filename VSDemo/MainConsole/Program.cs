@@ -15,6 +15,7 @@ namespace MainConsole
             Person weko = new Person("Wekoslav", "Stefanovski");
 
             Console.WriteLine(weko);
+            Console.WriteLine("{1}, {0}",weko.FirstName, weko.LastName);
             Console.WriteLine(Person.GetCount());
 
             Person pero = new Person("Petar", "Petrov");
