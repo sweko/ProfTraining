@@ -10,12 +10,27 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
+            //poly-morphism behaviour
+            List<Person> list = new List<Person>();
+
+            list.Add(new Person("Wekoslav", "Stefanovski"));
+            list.Add(new AgedPerson("Petar", "Petrov", 25));
+
+            foreach (Person person in list)
+            {
+                Console.WriteLine(person);
+            }
+
+            Person p = new AgedPerson("Trajko", "Trajcev", 56);
+            Console.WriteLine(p);
+
+
             //Aged Person exercises
-            AgedPerson weko = new AgedPerson();
-            weko.FirstName = "Wekoslav";
-            weko.LastName = "Stefanovski";
-            weko.Age = 0x27;
-            Console.WriteLine(weko);
+            //AgedPerson weko = new AgedPerson();
+            //weko.FirstName = "Wekoslav";
+            //weko.LastName = "Stefanovski";
+            //weko.Age = 0x27;
+            //Console.WriteLine(weko);
 
 
             //Person class exercises
