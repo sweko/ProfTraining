@@ -22,3 +22,17 @@ function changeSecond(){
 function addItem(){
     $("#mylist").append("<li>Six</li>");
 }
+
+function getResult(){
+    var listItems = $("#mylist li");
+    var result = "";
+    for (var index = 0; index < listItems.length; index++) {
+        var listItem = listItems[index];
+        var itemText =  $(listItem).text();
+        var firstLetter = itemText[0];
+        if (firstLetter !== "F"){
+            result += itemText;
+        }
+    }
+    $("#result").text(result);
+}
