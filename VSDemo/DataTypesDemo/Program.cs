@@ -73,13 +73,74 @@ namespace DataTypesDemo
             };
 
             if (p.Equals(p2))
-            {
                 Console.WriteLine("same");
-            }
             else
-            {
                 Console.WriteLine("not-same");
-            }
+
+
+            BinaryTree<int> binaryInts = new BinaryTree<int>
+            {
+                Root = 5,
+                Left = new BinaryTree<int>
+                {
+                    Root = 3,
+                    Left = new BinaryTree<int>
+                    {
+                        Root = 2
+                    },
+                    Right = new BinaryTree<int>
+                    {
+                        Root = 4
+                    }
+                },
+                Right = new BinaryTree<int>
+                {
+                    Root = 7,
+                    Left = new BinaryTree<int>
+                    {
+                        Root = 6
+                    },
+                    Right = new BinaryTree<int>
+                    {
+                        Root = 8
+                    }
+                },
+
+            };
+
+            Console.WriteLine(binaryInts);
+
+            BinaryTree<Person> bperson = new BinaryTree<Person>
+            {
+                Root = new Person { FirstName = "Wekoslav", LastName = "Stefanovski" },
+                Left = new BinaryTree<Person>
+                {
+                    Root = new Person { FirstName = "Kole", LastName = "Stefanovski" },
+                    Left = new BinaryTree<Person>
+                    {
+                        Root = new Person { FirstName = "Gjorgji", LastName = "Stefanovski" },
+                    },
+                    Right = new BinaryTree<Person>
+                    {
+                        Root = new Person { FirstName = "Trendafilka", LastName = "Stefanovska" },
+                    }
+                },
+                Right = new BinaryTree<Person>
+                {
+                    Root = new Person { FirstName = "Stanka", LastName = "Bojkova" },
+                    Left = new BinaryTree<Person>
+                    {
+                        Root = new Person { FirstName = "Stojan", LastName = "Bojkov" },
+                    },
+                    Right = new BinaryTree<Person>
+                    {
+                        Root = new Person { FirstName = "Mitra", LastName = "Bojkova" },
+                    }
+                },
+
+            };
+
+            Console.WriteLine(bperson);
 
         }
     }

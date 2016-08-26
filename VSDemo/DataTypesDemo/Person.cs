@@ -12,6 +12,11 @@ namespace DataTypesDemo
         public string LastName { get; set; }
 
         public Gender Gender { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 
     public enum Gender
