@@ -10,21 +10,30 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Person.GetCount());
-
-            Person weko = new Person("Wekoslav", "Stefanovski");
-
+            //Aged Person exercises
+            AgedPerson weko = new AgedPerson();
+            weko.FirstName = "Wekoslav";
+            weko.LastName = "Stefanovski";
+            weko.Age = 0x27;
             Console.WriteLine(weko);
-            Console.WriteLine("{1}, {0}",weko.FirstName, weko.LastName);
-            Console.WriteLine(Person.GetCount());
 
-            Person pero = new Person("Petar", "Petrov");
 
-            Console.WriteLine(pero);
-            Console.WriteLine(Person.GetCount());
+            //Person class exercises
+            //Console.WriteLine(Person.GetCount());
 
-            var empty = new Person();
-            Console.WriteLine(Person.GetCount());
+            //Person weko = new Person("Wekoslav", "Stefanovski");
+
+            //Console.WriteLine(weko);
+            //Console.WriteLine("{1}, {0}",weko.FirstName, weko.LastName);
+            //Console.WriteLine(Person.GetCount());
+
+            //Person pero = new Person("Petar", "Petrov");
+
+            //Console.WriteLine(pero);
+            //Console.WriteLine(Person.GetCount());
+
+            //var empty = new Person();
+            //Console.WriteLine(Person.GetCount());
         }
     }
 }

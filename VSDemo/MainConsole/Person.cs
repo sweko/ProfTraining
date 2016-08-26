@@ -43,7 +43,7 @@ namespace MainConsole
         //public method
         public override string ToString()
         {
-            return $"{FirstName} {LastName}";
+            return $"{LastName}, {FirstName}";
         }
 
         //public static method
