@@ -10,11 +10,20 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
-            Person weko = new Person();
-            weko.FirstName = "Wekoslav";
-            weko.LastName = "Stefanovski";
+            Console.WriteLine(Person.GetCount());
+
+            Person weko = new Person("Wekoslav", "Stefanovski");
 
             Console.WriteLine(weko);
+            Console.WriteLine(Person.GetCount());
+
+            Person pero = new Person("Petar", "Petrov");
+
+            Console.WriteLine(pero);
+            Console.WriteLine(Person.GetCount());
+
+            var empty = new Person();
+            Console.WriteLine(Person.GetCount());
         }
     }
 }
